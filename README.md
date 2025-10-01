@@ -1,9 +1,9 @@
 # Deteccion_de_anomalias_en_datos_de_ciberseguridad
 *Detección de intrusiones (CIC-IDS2017)
 Descripción general
-Este repositorio contiene un análisis exhaustivo del Conjunto de Datos de Evaluación de Detección de Intrusiones (CIC-IDS2017). El Instituto Canadiense de Ciberseguridad (CIC) diseñó este conjunto de datos para el desarrollo y la evaluación de sistemas de detección de intrusiones (IDS). El objetivo principal de este repositorio es mostrar la implementación y la comparación de diferentes modelos de aprendizaje automático para tareas de clasificación binaria y multiclase. El conjunto de datos se puede obtener aquí .
+Este repositorio contiene un análisis exhaustivo del Conjunto de Datos de Evaluación de Detección de Intrusiones (CIC-IDS2017). El Instituto Canadiense de Ciberseguridad (CIC) diseñó este conjunto de datos para el desarrollo y la evaluación de sistemas de detección de intrusiones (IDS). El objetivo principal de este repositorio es mostrar la implementación y la comparación de diferentes modelos de aprendizaje automático para tareas de clasificación binaria y multiclase.*
 
-Características del conjunto de datos
+*Características del conjunto de datos*
 Tamaño y composición
 Se capturaron más de 2,8 millones de instancias durante 5 días (del 3 al 7 de julio de 2017).
 Incluye tráfico normal y varios ataques: Fuerza Bruta, Heartbleed, Botnet, DoS, DDoS, Ataque Web e Infiltración.
