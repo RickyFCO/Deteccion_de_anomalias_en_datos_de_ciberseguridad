@@ -1,4 +1,4 @@
-# Detección de Intrusiones (CIC-IDS2017)
+# Detección de Intrusiones (CIC-IDS2017)=
 
 ## Descripción General
 Este repositorio contiene un análisis exhaustivo del Conjunto de Datos de Evaluación de Detección de Intrusiones (CIC-IDS2017). El Instituto Canadiense de Ciberseguridad (CIC) diseñó este conjunto de datos para el desarrollo y la evaluación de sistemas de detección de intrusiones (IDS). El objetivo principal es mostrar la implementación y comparación de diferentes modelos de aprendizaje automático para tareas de clasificación binaria y multiclase.
