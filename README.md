@@ -1,4 +1,4 @@
-# Detección de Anomalías en Datos de Ciberseguridad con Machine Learning
+# Detección de anomalías en datos de ciberseguridad
 
 ## 📜 Descripción del Proyecto
 
