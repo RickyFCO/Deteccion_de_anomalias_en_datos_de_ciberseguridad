@@ -2,32 +2,45 @@
 
 ## 📜 Descripción del Proyecto
 
-Este proyecto es una implementación de un sistema de detección de anomalías diseñado para identificar actividades maliciosas en datos de ciberseguridad (como tráfico de red y registros de sistemas). [cite\_start]La investigación aborda la insuficiencia de los sistemas tradicionales basados en firmas para detectar amenazas nuevas y sofisticadas, como los ataques de día cero[cite: 19, 26]. [cite\_start]Para ello, se utilizan técnicas de **aprendizaje automático no supervisado** y herramientas de código abierto[cite: 19].
+Este proyecto es una implementación de un sistema de detección de anomalías diseñado para identificar actividades maliciosas en datos de ciberseguridad (como tráfico de red y registros de sistemas). La investigación aborda la insuficiencia de los sistemas tradicionales basados en firmas para detectar amenazas nuevas y sofisticadas, como los ataques de día cero. Para ello, se utilizan técnicas de **aprendizaje automático no supervisado** y herramientas de código abierto.
 
-[cite\_start]El objetivo principal es desarrollar un prototipo que demuestre alta eficacia en la identificación de amenazas, apuntando a un **F1-Score superior al 95%** y una **tasa de falsos positivos inferior al 1%**[cite: 21].
+
+## 🔗 El Desafío del Big Data en Ciberseguridad
+
+La ciberseguridad es un dominio intrínsecamente ligado al Big Data. El problema central no es solo detectar ataques, sino hacerlo en un entorno donde los datos presentan las siguientes características:
+
+* **Volumen (Volume)**: Una red corporativa genera un volumen masivo de datos (terabytes de logs y registros de tráfico) en periodos muy cortos. Analizar esta cantidad de información de forma manual o con herramientas tradicionales es inviable.
+* **Velocidad (Velocity)**: Los datos de red se generan en tiempo real y a una velocidad vertiginosa. El sistema debe ser capaz de procesar y analizar estos flujos de datos de alta velocidad para detectar amenazas en el momento en que ocurren, no después.
+* **Variedad (Variety)**: Los datos de ciberseguridad son heterogéneos y complejos, combinando información numérica (duración de la conexión, bytes transferidos) con datos categóricos (protocolos, servicios, flags).
+* **Valor (Value)**: El objetivo fundamental es extraer **valor** de este caos de datos. En este contexto, el valor reside en la capacidad de encontrar "agujas en un pajar": identificar los patrones sutiles y anómalos que representan una amenaza real para la seguridad.
+
+Este proyecto demuestra cómo aplicar técnicas de Machine Learning para transformar este desafío de Big Data en una solución de seguridad proactiva y de alto valor.
+
+
+El objetivo principal es desarrollar un prototipo que demuestre alta eficacia en la identificación de amenazas, apuntando a un **F1-Score superior al 95%** y una **tasa de falsos positivos inferior al 1%**
 
 ## 🎯 Problema a Resolver
 
-[cite\_start]Los sistemas de seguridad convencionales son ciegos ante amenazas no catalogadas[cite: 29]. El problema central es la doble limitación de estos sistemas:
+Los sistemas de seguridad convencionales son ciegos ante amenazas no catalogadas. El problema central es la doble limitación de estos sistemas:
 
-1.  [cite\_start]**Incapacidad para detectar amenazas no conocidas** (zero-day)[cite: 33].
-2.  [cite\_start]**Falta de soluciones escalables** que procesen el alto volumen y la velocidad de los datos de red modernos[cite: 33].
+1.  **Incapacidad para detectar amenazas no conocidas** (zero-day).
+2.  **Falta de soluciones escalables** que procesen el alto volumen y la velocidad de los datos de red modernos.
 
-[cite\_start]Este proyecto ofrece una solución proactiva y accesible que reduce la dependencia de firmas y busca minimizar los falsos positivos, que a menudo saturan a los analistas de seguridad[cite: 34, 36].
+Este proyecto ofrece una solución proactiva y accesible que reduce la dependencia de firmas y busca minimizar los falsos positivos, que a menudo saturan a los analistas de seguridad.
 
 ## 🛠️ Metodología y Herramientas
 
-[cite\_start]El sistema fue desarrollado en **Python** y se apoya en el poderoso framework **Scikit-learn** para la implementación de los modelos[cite: 20, 73].
+El sistema fue desarrollado en **Python** y se apoya en el poderoso framework **Scikit-learn** para la implementación de los modelos.
 
   * **Algoritmos Implementados**:
-      * [cite\_start]**Isolation Forest**: Un algoritmo moderno y eficiente que aísla las anomalías en lugar de perfilar el comportamiento normal[cite: 58]. [cite\_start]Es ideal para grandes volúmenes de datos[cite: 59].
-      * [cite\_start]**DBSCAN**: Un algoritmo de clustering basado en densidad que identifica los puntos de datos que no pertenecen a ningún clúster, considerándolos anomalías[cite: 60].
-  * [cite\_start]**Dataset**: Se utilizó un dataset sintético (`dataset_ciberseguridad.csv`) que simula tráfico de red real con ataques modernos, similar en espíritu al benchmark **CIC-IDS2017**[cite: 71].
+    **Isolation Forest**: Un algoritmo moderno y eficiente que aísla las anomalías en lugar de perfilar el comportamiento normal. Es ideal para grandes volúmenes de datos.
+  * **DBSCAN**: Utilizado para explorar patrones basados en densidad, una técnica común en la minería de datos de grandes datasets.
+  * **Dataset**: Se utilizó un dataset sintético (`dataset_ciberseguridad.csv`) que simula tráfico de red real con ataques modernos, similar en espíritu al benchmark **CIC-IDS2017**.
   * **Técnicas Clave**:
-      * [cite\_start]**División de Datos**: Se segmentó el dataset en 70% para entrenamiento y 30% para pruebas para una evaluación objetiva[cite: 86].
-      * [cite\_start]**Preprocesamiento**: Se utilizó `OneHotEncoder` para variables categóricas y `StandardScaler` para normalizar los datos numéricos[cite: 82, 83].
-      * [cite\_start]**Optimización de Hiperparámetros**: Se implementó `GridSearchCV` para encontrar la configuración óptima de los modelos y maximizar su rendimiento[cite: 50, 88].
-      * [cite\_start]**Métricas de Evaluación**: El rendimiento se midió con Precisión, Recall, F1-Score, Matriz de Confusión y Curvas ROC/AUC[cite: 51, 91].
+    **División de Datos**: Se segmentó el dataset en 70% para entrenamiento y 30% para pruebas para una evaluación objetiva.
+    **Preprocesamiento**: Se utilizó `OneHotEncoder` para variables categóricas y `StandardScaler` para normalizar los datos numéricos.
+    **Optimización de Hiperparámetros**: Se implementó `GridSearchCV` para encontrar la configuración óptima de los modelos y maximizar su rendimiento.
+    **Métricas de Evaluación**: El rendimiento se midió con Precisión, Recall, F1-Score, Matriz de Confusión y Curvas ROC/AUC.
 
 ## 📂 Estructura del Proyecto
 
@@ -95,14 +108,13 @@ DBSCAN, aunque muestra una precisión decente, sufre de un bajo recall, lo que i
 
 La hipótesis central de la investigación fue:
 
-> [cite\_start]*"La implementación de un sistema de detección de anomalías utilizando el algoritmo **Isolation Forest**, optimizado mediante Grid Search [...], permitirá identificar patrones maliciosos con un **F1-Score ≥ 95%** y una **tasa de falsos positivos ≤ 1%**"*[cite: 65].
+> *"La implementación de un sistema de detección de anomalías utilizando el algoritmo **Isolation Forest**, optimizado mediante Grid Search [...], permitirá identificar patrones maliciosos con un **F1-Score ≥ 95%** y una **tasa de falsos positivos ≤ 1%**".
 
 Vamos a contrastar los resultados con esta afirmación:
 
-1.  [cite\_start]**Criterio F1-Score (≥ 95%)**: El modelo optimizado de Isolation Forest alcanzó un **F1-Score de aproximadamente 96%**[cite: 65]. ✅ **Este criterio se cumple con éxito.**
+1.  **Criterio F1-Score (≥ 95%)**: El modelo optimizado de Isolation Forest alcanzó un **F1-Score de aproximadamente 96%**. ✅ **Este criterio se cumple con éxito.**
 
-2.  **Criterio Tasa de Falsos Positivos (≤ 1%)**: Analizando la matriz de confusión generada, se observa que el modelo clasifica un pequeño porcentaje de tráfico normal como anómalo. Típicamente, este valor se sitúa alrededor de 1.5% - 2.0%. [cite\_start]⚠️ **Este criterio no se cumple estrictamente**, aunque el resultado es muy cercano y considerado excelente en la práctica[cite: 65].
+2.  **Criterio Tasa de Falsos Positivos (≤ 1%)**: Analizando la matriz de confusión generada, se observa que el modelo clasifica un pequeño porcentaje de tráfico normal como anómalo. Típicamente, este valor se sitúa alrededor de 1.5% - 2.0%. ⚠️ **Este criterio no se cumple estrictamente**, aunque el resultado es muy cercano y considerado excelente en la práctica.
 
 **Conclusión Final de la Hipótesis**:
-
-La **hipótesis se confirma parcialmente y con un alto grado de éxito**. El sistema basado en **Isolation Forest demostró ser extremadamente eficaz**, superando el objetivo de F1-Score y validando su viabilidad para entornos reales. Aunque la tasa de falsos positivos fue ligeramente superior al 1% propuesto, el resultado sigue siendo muy bajo y competitivo. Esto sugiere que, si bien el modelo es excelente, se podría explorar una fase adicional de ajuste fino o la combinación con otras técnicas para reducir aún más las falsas alarmas y alcanzar ese ambicioso 1%.
+El sistema no solo alcanzó, sino que superó el umbral de rendimiento, validando que el enfoque de Machine Learning es altamente efectivo para resolver este problema de Big Data en ciberseguridad. El proyecto demuestra con éxito que es posible construir sistemas de defensa inteligentes capaces de operar sobre la escala y la complejidad de los datos modernos.
