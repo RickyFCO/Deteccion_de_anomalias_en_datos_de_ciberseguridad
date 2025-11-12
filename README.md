@@ -1,6 +1,6 @@
 # Detección de anomalías en datos de ciberseguridad
 
-## 📜 Descripción del Proyectoo
+## 📜 Descripción del Proyecto
 
 Este proyecto es una implementación de un sistema de detección de anomalías diseñado para identificar actividades maliciosas en datos de ciberseguridad (como tráfico de red y registros de sistemas). La investigación aborda la insuficiencia de los sistemas tradicionales basados en firmas para detectar amenazas nuevas y sofisticadas, como los ataques de día cero. Para ello, se utilizan técnicas de **aprendizaje automático no supervisado** y herramientas de código abierto.
 
