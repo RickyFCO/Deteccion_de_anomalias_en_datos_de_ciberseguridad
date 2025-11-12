@@ -1,4 +1,4 @@
-# Detección de anomalías en datos de ciberseguridad
+# Detección de anomalías en datos de ciberseguridad/BIG DATA
 
 ## 📜 Descripción del Proyecto
 
